@@ -8,7 +8,7 @@ function Login() {
 const [userInfo, setUserInfo] = useState({email: "", password: ""});
 const {login} = useContext(AuthContext);
 const navigate = useNavigate();
-const backend = "https://backendzerodhaclone.onrender.com";
+const backend = "https://backendzerodaclone.onrender.com";
 
 const handleChange = (e) => {
   const {name, value} = e.target; 
