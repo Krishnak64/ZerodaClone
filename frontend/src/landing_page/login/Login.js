@@ -17,7 +17,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post("https://backendzerodaclone.onrender.com/login", userInfo);
+    const res = await axios.post("https:/backendzerodaclone.onrender.com/login", userInfo);
     if (res.data.success) {
       toast.success(res.data.message);
       login(res.data.token, res.data.user); // Update the authentication state
