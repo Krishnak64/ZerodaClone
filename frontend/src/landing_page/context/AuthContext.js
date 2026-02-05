@@ -7,7 +7,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
-  const dashboard = "https://zerodhabackend-yx8q.onrender.com";
+  const dashboard = "https://dashboardzerodaclone.onrender.com";
 
   useEffect(() => {
     // Check if the user is already logged in (e.g., check local storage or cookies)
@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserInfo = async (token) => {
     try {
-      const response = await fetch(`{dashboard}/user`, {
+      const response = await fetch(`${dashboard}/user`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
