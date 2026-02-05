@@ -24,7 +24,7 @@ function Signup() {
   const handelSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`{backend}/signup`, newUser);
+      const res = await axios.post(`${backend}/signup`, newUser);
       console.log(res);
       toast.success(res.data.message);
 
