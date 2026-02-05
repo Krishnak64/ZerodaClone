@@ -8,7 +8,6 @@ function Login() {
 const [userInfo, setUserInfo] = useState({email: "", password: ""});
 const {login} = useContext(AuthContext);
 const navigate = useNavigate();
-const backend = "https://backendzerodaclone.onrender.com";
 
 const handleChange = (e) => {
   const {name, value} = e.target; 
@@ -18,7 +17,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post(`${backend}/login`, userInfo);
+    const res = await axios.post("https://backendzerodaclone.onrender.com/login", userInfo);
     if (res.data.success) {
       toast.success(res.data.message);
       login(res.data.token, res.data.user); // Update the authentication state
