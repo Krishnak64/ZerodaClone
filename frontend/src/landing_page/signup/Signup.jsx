@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
-  const backend = "https://backendzerodhaclone.onrender.com"
+  const backend = "https://backendzerodaclone.onrender.com"
   const [newUser, setNewUser] = useState({
     fullName: "",
     email: "",
